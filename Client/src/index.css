@@ -1,0 +1,201 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+export default {
+  theme {
+  --background: #ffffff;
+  --foreground: #4b5563;
+  --card: #f9fafb;
+  --card-foreground: #4b5563;
+  --popover: #ffffff;
+  --popover-foreground: #4b5563;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899;
+  --secondary-foreground: #ffffff;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --accent: #ec4899;
+  --accent-foreground: #ffffff;
+  --destructive: #be123c;
+  --destructive-foreground: #ffffff;
+  --border: #d1d5db;
+  --input: #ffffff;
+  --ring: rgba(8, 145, 178, 0.5);
+  --chart-1: #0891b2;
+  --chart-2: #ec4899;
+  --chart-3: #15803d;
+  --chart-4: #f59e0b;
+  --chart-5: #be123c;
+  --radius: 0.5rem;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #4b5563;
+  --sidebar-primary: #0891b2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ec4899;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #d1d5db;
+  --sidebar-ring: rgba(8, 145, 178, 0.5);
+}
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899;
+  --secondary-foreground: #ffffff;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #ec4899;
+  --accent-foreground: #ffffff;
+  --destructive: #be123c;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: rgba(8, 145, 178, 0.5);
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #0891b2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ec4899;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(8, 145, 178, 0.5);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Updated to OKLCH color space for better color consistency */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.298 0.013 258.338);
+  --card: oklch(0.98 0.002 247.858);
+  --card-foreground: oklch(0.298 0.013 258.338);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.298 0.013 258.338);
+  --primary: oklch(0.563 0.175 198.61);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.646 0.222 330.027);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.98 0.002 247.858);
+  --muted-foreground: oklch(0.439 0.006 258.338);
+  --accent: oklch(0.646 0.222 330.027);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.855 0.004 258.338);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.563 0.175 198.61 / 0.5);
+  --chart-1: oklch(0.563 0.175 198.61);
+  --chart-2: oklch(0.646 0.222 330.027);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.577 0.245 27.325);
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Added proper dark mode colors in OKLCH */
+  --background: oklch(0.145 0.016 237.307);
+  --foreground: oklch(0.945 0.004 258.338);
+  --card: oklch(0.188 0.016 237.307);
+  --card-foreground: oklch(0.945 0.004 258.338);
+  --popover: oklch(0.188 0.016 237.307);
+  --popover-foreground: oklch(0.945 0.004 258.338);
+  --primary: oklch(0.563 0.175 198.61);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.646 0.222 330.027);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.269 0.016 237.307);
+  --muted-foreground: oklch(0.708 0.008 258.338);
+  --accent: oklch(0.646 0.222 330.027);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.269 0.016 237.307);
+  --input: oklch(0.188 0.016 237.307);
+  --ring: oklch(0.563 0.175 198.61 / 0.5);
+}
+
+/* Added Tailwind v4 theme configuration using @theme inline */
+@theme inline {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+*{
+  outline: none;
+}
+
+::-webkit-scrollbar{
+  @apply hidden
+}
