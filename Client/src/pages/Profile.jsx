@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { User, Mail, Shield, Edit3, Save, X } from "lucide-react"

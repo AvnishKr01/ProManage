@@ -1,11 +1,10 @@
-"use client"
-
 import { useState } from "react"
 import { useProject } from "../contexts/ProjectContext"
 import { X, Calendar, Target, FileText } from "lucide-react"
 import { format } from "date-fns"
 
-export default function CreateProjectModal({ isOpen, onClose }) {
+const CreateProjectModal = ({ isOpen, onClose }) => {
+  
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -116,9 +115,8 @@ export default function CreateProjectModal({ isOpen, onClose }) {
               required
               value={formData.title}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground placeholder-muted-foreground ${
-                errors.title ? "border-destructive" : "border-border"
-              }`}
+              className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground placeholder-muted-foreground ${errors.title ? "border-destructive" : "border-border"
+                }`}
               placeholder="Enter project title"
             />
             {errors.title && <p className="mt-1 text-sm text-destructive">{errors.title}</p>}
@@ -139,9 +137,8 @@ export default function CreateProjectModal({ isOpen, onClose }) {
               required
               value={formData.description}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none ${
-                errors.description ? "border-destructive" : "border-border"
-              }`}
+              className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground placeholder-muted-foreground resize-none ${errors.description ? "border-destructive" : "border-border"
+                }`}
               placeholder="Describe your project goals and objectives"
             />
             {errors.description && <p className="mt-1 text-sm text-destructive">{errors.description}</p>}
@@ -219,9 +216,8 @@ export default function CreateProjectModal({ isOpen, onClose }) {
                 value={formData.endDate}
                 onChange={handleChange}
                 min={formData.startDate}
-                className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground ${
-                  errors.endDate ? "border-destructive" : "border-border"
-                }`}
+                className={`w-full px-4 py-3 bg-input border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-foreground ${errors.endDate ? "border-destructive" : "border-border"
+                  }`}
               />
               {errors.endDate && <p className="mt-1 text-sm text-destructive">{errors.endDate}</p>}
             </div>
@@ -256,3 +252,5 @@ export default function CreateProjectModal({ isOpen, onClose }) {
     </div>
   )
 }
+
+export default CreateProjectModal

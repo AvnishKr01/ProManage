@@ -1,4 +1,3 @@
-"use client"
 import { TrendingUp } from "lucide-react"
 
 export default function TaskCompletionChart({ tasks, timeRange }) {

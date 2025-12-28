@@ -1,14 +1,9 @@
-"use client"
-
 import { useState, useEffect } from "react"
-import { useProject } from "../contexts/ProjectContext"
-import { useAuth } from "../contexts/AuthContext"
 import { CheckSquare, AlertTriangle, Plus, Calendar, Users, Target, Activity } from "lucide-react"
 import { format, isAfter, startOfWeek, endOfWeek, isWithinInterval } from "date-fns"
-import ProjectProgressChart from "../components/ProjectProgressChart"
-import TaskCompletionChart from "../components/TaskCompletionChart"
-import RecentActivity from "../components/RecentActivity"
-import UpcomingDeadlines from "../components/UpcomingDeadlines"
+import { useProject } from "../contexts/ProjectContext"
+import { useAuth } from "../contexts/AuthContext"
+import { ProjectProgressChart, TaskCompletionChart, RecentActivity, UpcomingDeadlines } from "./Index"
 
 export default function Dashboard() {
   const { user } = useAuth()

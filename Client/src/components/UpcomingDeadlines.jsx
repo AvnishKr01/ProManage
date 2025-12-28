@@ -1,5 +1,3 @@
-"use client"
-
 import { Calendar, AlertTriangle, Clock } from "lucide-react"
 import { format, differenceInDays } from "date-fns"
 

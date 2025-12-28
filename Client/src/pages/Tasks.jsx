@@ -1,12 +1,7 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { useProject } from "../contexts/ProjectContext"
 import { Plus, Search, Filter, LayoutGrid, List } from "lucide-react"
-import TaskBoard from "../components/TaskBoard"
-import TaskList from "../components/TaskList"
-import CreateTaskModal from "../components/CreateTaskModal"
-import LoadingSpinner from "../components/LoadingSpinner"
+import { TaskBoard, TaskList, CreateTaskModal, LoadingSpinner } from "./Index"
 
 export default function Tasks() {
   const { projects, tasks, loading, fetchProjects } = useProject()

@@ -1,5 +1,3 @@
-"use client"
-
 import { Link } from "react-router-dom"
 import { Calendar, Users, MoreVertical } from "lucide-react"
 import { format, isAfter, differenceInDays } from "date-fns"

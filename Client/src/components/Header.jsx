@@ -1,5 +1,3 @@
-"use client"
-
 import { useAuth } from "../contexts/AuthContext"
 import { LogOut, User, Bell } from "lucide-react"
 

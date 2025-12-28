@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"
 
 // Create axios instance
 const api = axios.create({
@@ -38,27 +38,27 @@ api.interceptors.response.use(
 
 // Auth API
 export const authAPI = {
-  login: (email, password) => api.post("/auth/login", { email, password }),
-  register: (name, email, password, role) => api.post("/auth/register", { name, email, password, role }),
-  getCurrentUser: () => api.get("/auth/me"),
+  login: (email, password) => api.post("/api/auth/login", { email, password }),
+  register: (name, email, password, role) => api.post("/api/auth/register", { name, email, password, role }),
+  getCurrentUser: () => api.get("/api/auth/me"),
 }
 
 // Project API
 export const projectAPI = {
-  getProjects: () => api.get("/projects"),
-  getProject: (id) => api.get(`/projects/${id}`),
-  createProject: (data) => api.post("/projects", data),
-  updateProject: (id, data) => api.put(`/projects/${id}`, data),
-  deleteProject: (id) => api.delete(`/projects/${id}`),
+  getProjects: () => api.get("/api/projects"),
+  getProject: (id) => api.get(`/api/projects/${id}`),
+  createProject: (data) => api.post("/api/projects", data),
+  updateProject: (id, data) => api.put(`/api/projects/${id}`, data),
+  deleteProject: (id) => api.delete(`/api/projects/${id}`),
 }
 
 // Task API
 export const taskAPI = {
-  getTasksByProject: (projectId) => api.get(`/tasks/project/${projectId}`),
-  getTask: (id) => api.get(`/tasks/${id}`),
-  createTask: (data) => api.post("/tasks", data),
-  updateTask: (id, data) => api.put(`/tasks/${id}`, data),
-  deleteTask: (id) => api.delete(`/tasks/${id}`),
+  getTasksByProject: (projectId) => api.get(`/api/tasks/project/${projectId}`),
+  getTask: (id) => api.get(`/api/tasks/${id}`),
+  createTask: (data) => api.post("/api/tasks", data),
+  updateTask: (id, data) => api.put(`/api/tasks/${id}`, data),
+  deleteTask: (id) => api.delete(`/api/tasks/${id}`),
 }
 
 export default api

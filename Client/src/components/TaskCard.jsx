@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Calendar, MoreVertical } from "lucide-react"
 import { format, isAfter, differenceInDays } from "date-fns"

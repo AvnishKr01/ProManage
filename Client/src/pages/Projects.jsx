@@ -1,11 +1,7 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { useProject } from "../contexts/ProjectContext"
 import { Plus, Search, Filter, BarChart3 } from "lucide-react"
-import ProjectCard from "../components/ProjectCard"
-import CreateProjectModal from "../components/CreateProjectModal"
-import LoadingSpinner from "../components/LoadingSpinner"
+import { ProjectCard,CreateProjectModal, LoadingSpinner } from "./Index"
 
 export default function Projects() {
   const { projects, loading, fetchProjects } = useProject()

@@ -1,5 +1,3 @@
-"use client"
-
 import { Activity, CheckSquare, Target, Users, Clock } from "lucide-react"
 import { format } from "date-fns"
 

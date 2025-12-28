@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { useProject } from "../contexts/ProjectContext"
 import TaskCard from "./TaskCard"
