@@ -22,6 +22,10 @@ mongoose
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err))
 
+  app.get('/', (req, res) => {
+    res.send('Welcome to the Project Management API')
+  });
+
 // Routes
 app.use("/api/auth", authRoutes)
 app.use("/api/projects", projectRoutes)
